@@ -1,10 +1,15 @@
 public class LibraryItem {
 
-    private String book, author;
+    private String book;
+    private Author author;
     private int yearPublished, howManyCopies;
 
+    public LibraryItem(){
+        
+    }
+
     //constructor with all properties
-    public LibraryItem( String book, String author, int yearPublished, int howManyCopies){
+    public LibraryItem( String book, Author author, int yearPublished, int howManyCopies){
         this.book = book;
         this.author = author;
         this.yearPublished = yearPublished;
@@ -15,7 +20,7 @@ public class LibraryItem {
     public String getBook(){
         return book;
     }
-    public String getAuthor(){
+    public Author getAuthor(){
         return author;
     }
     public int getYearPublished(){
@@ -29,7 +34,7 @@ public class LibraryItem {
     public void setGetBook(String book){
         this.book = book;
     }
-    public void setAuthor(String author){
+    public void setAuthor(Author author){
         this.author = author;
     }
     public void setYearPublished(int yearPublished){

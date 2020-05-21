@@ -3,7 +3,11 @@ public class Books extends LibraryItem{
     
     private int numpages;
 
-    public Books( String book, String author, int yearPublished, int howManyCopies, int numpages){
+    public Books(){
+        
+    }
+
+    public Books( String book, Author author, int yearPublished, int howManyCopies, int numpages){
         super(book, author, yearPublished, howManyCopies);
         this.numpages = numpages;
     }

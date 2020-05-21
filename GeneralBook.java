@@ -1,8 +1,11 @@
-public class GeneralBook extends Books{
+public class GeneralBook extends Books implements Loanable{
 
     private String genre;
 
-    public GeneralBook(String book, String author, int yearPublished, int howManyCopies, int numpages, String genre){
+    public GeneralBook(){
+    }
+
+    public GeneralBook(String book, Author author, int yearPublished, int howManyCopies, int numpages, String genre){
         super(book, author, yearPublished, howManyCopies, numpages);
         this.genre = genre;
     }
@@ -17,4 +20,12 @@ public class GeneralBook extends Books{
         this.genre = genre;
     }
     
+    @Override
+    public boolean isLoanable(){
+        return true;
+    }
+    public Schedule schedule(){
+        return Schedule.WEEKLY;
+    }
+
 }
